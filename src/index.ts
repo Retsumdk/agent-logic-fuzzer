@@ -8,6 +8,8 @@ import { Command } from "commander";
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 
+const NAME = "agent-logic-fuzzer";
+
 interface Config {
   apiKey?: string;
   baseUrl: string;
@@ -32,10 +34,10 @@ function loadConfig(): Config {
 }
 
 async function main(cfg: Config) {
-  console.log(`[${name}] Connected to ${cfg.baseUrl}`);
-  console.log(`[${name}] Timeout: ${cfg.timeout}ms | Retries: ${cfg.retries}`);
+  console.log(`[${NAME}] Connected to ${cfg.baseUrl}`);
+  console.log(`[${NAME}] Timeout: ${cfg.timeout}ms | Retries: ${cfg.retries}`);
   // TODO: implement your logic here
-  console.log(`[${name}] Done.`);
+  console.log(`[${NAME}] Done.`);
 }
 
 const program = new Command();
